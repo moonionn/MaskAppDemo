@@ -7,7 +7,7 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/bg_amount_info"
-            android:title="Button1" />
+            android:title="口罩GoogleMap" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/bg_amount_info"

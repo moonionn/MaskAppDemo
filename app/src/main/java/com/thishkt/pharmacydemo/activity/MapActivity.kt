@@ -9,11 +9,13 @@ import android.location.LocationManager
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import androidx.core.view.get
 import com.google.android.gms.location.*
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -22,6 +24,7 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.gson.Gson
 import com.thishkt.pharmacydemo.PHARMACIES_DATA_URL
 import com.thishkt.pharmacydemo.R
@@ -57,8 +60,26 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWin
         binding = ActivityMapBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //button3
+        binding.navView.setNavigationItemSelectedListener { item->
+            when (item.itemId) {
+                R.id.nav_home -> {
+                    //button1
+                    startActivity(Intent(this, MainActivity::class.java))
+                    // handle click
+                    true
+                }
 
+                R.id.nav_gallery->{
+                    //button2
+                    Toast.makeText(this,"button2", Toast.LENGTH_SHORT).show()
+                    true
+                }
+
+
+
+                else -> false
+            }
+        }
 
 
 
@@ -71,6 +92,8 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWin
         mapFragment.getMapAsync(this)
 
         getPharmacyData()
+
+
     }
 
     private fun getPharmacyData() {
