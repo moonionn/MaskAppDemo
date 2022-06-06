@@ -99,7 +99,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWin
 
                 Log.d("QQQ", "pharmaciesData:$pharmaciesData")
 
-                // 透過資覅轉換方式，轉換為GSON(做存取比較方便)
+                // 轉換為GSON(做存取比較方便)
                 // 將資料放到pharmacyInfo
                 pharmacyInfo = Gson().fromJson(pharmaciesData, PharmacyInfo::class.java)
 
@@ -184,7 +184,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWin
                             // 檢查locationResult。Null > return(不會往下執行)
                             locationResult ?: return
                             Log.d(
-                                "HKT",
+                                "QQQ",
                                 "緯度:${locationResult.lastLocation.latitude} , 經度:${locationResult.lastLocation.longitude} "
                             )
 
@@ -383,7 +383,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWin
                 intent.putExtra("data", filterData.first())
                 startActivity(intent)
             } else {
-                Log.d("HKT", "查無資料")
+                Log.d("QQQ", "查無資料")
             }
         }
     }

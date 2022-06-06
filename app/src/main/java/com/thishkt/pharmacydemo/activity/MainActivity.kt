@@ -145,7 +145,7 @@ class MainActivity : AppCompatActivity(), MainAdapter.IItemClickListener {
         setSpinnerTown()
     }
 
-    //根據縣市，來選其他鄉鎮
+    // 根據縣市，來選其他鄉鎮
     // ListView必須利用Adapter將資料載入
     // ArrayAdapter是最基本的方法 >> 宣告一個陣列把要值塞進去，接著ListView就會依照順序顯示出來
     // 此Adapter為鄉鎮的Adapter
@@ -180,8 +180,8 @@ class MainActivity : AppCompatActivity(), MainAdapter.IItemClickListener {
                 //資料都在body裡，?為資料不為空時
                 val pharmaciesData = response.body?.string()
 
-                //將JSON資料轉為GSON
-                //fromJson("第一欄位", "第二欄位")
+                // 將JSON資料轉為GSON
+                // fromJson("第一欄位", "第二欄位")
                 // 第一欄位(資料來源):透過OkHttp或的的資料;
                 // 第二欄位(要轉換為甚麼格式)：帶入我們自定義的類別
                 pharmacyInfo = Gson().fromJson(pharmaciesData, PharmacyInfo::class.java)
