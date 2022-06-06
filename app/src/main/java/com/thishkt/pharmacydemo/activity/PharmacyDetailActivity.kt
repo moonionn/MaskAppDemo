@@ -8,6 +8,7 @@ import com.thishkt.pharmacydemo.databinding.ActivityPharmacyDetailBinding
 
 class PharmacyDetailActivity : AppCompatActivity() {
 
+    // 透過lazy{}方式初始化變數
     private val data by lazy { intent.getSerializableExtra("data") as? Feature }
 
     private val name by lazy { data?.properties?.name }
@@ -22,6 +23,7 @@ class PharmacyDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 //        setContentView(R.layout.activity_pharmacy_detail)
 
+        // 用ViewBinding寫法
         binding = ActivityPharmacyDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -29,6 +31,7 @@ class PharmacyDetailActivity : AppCompatActivity() {
 
     }
 
+    // 資料顯示
     private fun initView() {
         binding.tvName.text = name ?: "資料發生錯誤"
         binding.tvAdultAmount.text = maskAdultAmount.toString()

@@ -3,7 +3,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.thishkt.pharmacydemo">
 
-    //獲得網路權限
+    //獲得網路權限(一般權限)
     <uses-permission android:name="android.permission.INTERNET" />
     //獲得位置權限(較私密)，除了宣告還是得詢問使用者
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>

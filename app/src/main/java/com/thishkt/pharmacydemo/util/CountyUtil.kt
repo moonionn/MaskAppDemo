@@ -462,6 +462,8 @@ object CountyUtil {
      * @param countyName 縣市名稱
      * @return 返回該縣市的所有鄉鎮名稱
      */
+
+    // 根據丟進來的參數縣市，回傳對應的該縣市的鄉鎮
     fun getTownsByCountyName(countyName: String): List<Any> {
         val index = counties.indexOf(countyName)
         return towns[index]
@@ -472,6 +474,7 @@ object CountyUtil {
      * 獲取縣市索引值
      * @return 返回所有縣市名稱
      */
+    // 根據字串告訴我，我現在index值是多少
     fun getCountyIndexByName(countyName:String): Int {
         return counties.indexOf(countyName)
     }

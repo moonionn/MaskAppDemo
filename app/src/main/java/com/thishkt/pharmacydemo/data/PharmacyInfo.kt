@@ -1,11 +1,14 @@
 package com.thishkt.pharmacydemo.data
 
+//可定義自己要的名稱 Serializable
 import java.io.Serializable
 
 data class PharmacyInfo(
     val features: List<Feature>,
     val type: String
+    //type與JSON資料欄位一樣，才能抓到資料
 ):Serializable
+
 
 data class Feature(
     val geometry: Geometry,
