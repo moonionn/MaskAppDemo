@@ -187,43 +187,6 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWin
                                 "QQQ",
                                 "緯度:${locationResult.lastLocation.latitude} , 經度:${locationResult.lastLocation.longitude} "
                             )
-
-
-//                            val currentLocation =
-//                                LatLng(
-//                                    locationResult.lastLocation.latitude,
-//                                    locationResult.lastLocation.longitude
-//                                )
-
-                            //清除所有標記
-                            //googleMap?.clear()
-
-                            //清除上一次位置標記
-                            //mCurrLocationMarker?.remove()
-
-                            //當下位置存到一個 Marker 變數中，好讓下一次可以清除
-//                            mCurrLocationMarker =googleMap?.addMarker(
-//                                MarkerOptions().position(currentLocation).title("現在位置")
-//                            )
-
-//                            googleMap?.isMyLocationEnabled = true
-
-//
-//                            mCurrLocationMarker?.remove()
-//                            googleMap?.setInfoWindowAdapter(MyInfoWindowAdapter(mContext))
-//                            mCurrLocationMarker = googleMap?.addMarker(
-//                                MarkerOptions()
-//                                    .position(currentLocation)
-//                                    .title("現在位置")
-//                                    .snippet("100,66")
-//                            )
-//                            mCurrLocationMarker?.showInfoWindow()
-//
-//                            googleMap?.moveCamera(
-//                                CameraUpdateFactory.newLatLngZoom(
-//                                    currentLocation, 15f
-//                                )
-//                            )
                         }
                     },
                     null
